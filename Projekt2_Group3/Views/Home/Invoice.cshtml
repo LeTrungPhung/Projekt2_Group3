@@ -1,0 +1,52 @@
+﻿@model Projekt2_Group3.Models.invoice_model
+
+@{
+    ViewBag.Title = "Invoice";
+    Layout = "~/Views/Shared/_LayoutEditProfile.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    if (Session["username"] != null)
+    {
+        <body>
+            <div class="header">
+                <ul>
+                    <li class="logo"><a href="@Url.Action("UserHomepage", "Home")">Group3</a></li>
+                    <li class="section">@Html.ActionLink("Log out", "Logout")</li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="profile">
+                    <div class="Logo" style="text-align: center">
+                        <a href="FAQs.html"><img src="../img/bill.svg"></a>
+                        <br>
+                        <p1> Manager Your Orders </p1>
+                    </div>
+                    <div class="box">
+                        @Html.EditorFor(model => model.keyword, new {htmlAttributes = new { @class = "form-control",@placeholder = "Search by invoice number", @type = "text",
+                                                                                             @style = "height: 40px; font - size: 13px; border - radius: 10px; border: 2px solid #18A0FB;"
+                             }
+                        })
+
+                        <table class="table" style="margin-top: 50px; width: 100%; text-align: left; ">
+
+
+                            @foreach (var item in Model.invoices)
+                            {
+                            <tr style="display: grid;padding: 12px; border: solid #18a0fb 2px; border-radius: 10px; margin-bottom: 5px">
+                                <td style="">
+                                    <p>Invoice number: @Html.DisplayFor(modelItem => item.invoice_id) </p> <p> Price: @Html.DisplayFor(modelItem => item.total_price)</p> <p> Purchase Date: @Html.DisplayFor(modelItem => item.purchase_date) </p>
+                                </td>
+                            </tr>
+                            }
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+
+    }
+}

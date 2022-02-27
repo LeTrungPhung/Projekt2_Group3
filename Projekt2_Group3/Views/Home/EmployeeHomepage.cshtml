@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Employee Homepage";
+    Layout = "~/Views/Shared/_LayoutEmployeeHomepage.cshtml";
+}
+
+@if (Session["username"] != null)
+{
+    <body>
+        <div class="header">
+            <ul>
+                <li class="logo"><a href="">Group3</a></li>
+                <li class="section"><a href="">Welcome @Session["username"].ToString()</a></li>
+                <li class="section">@Html.ActionLink("Log out", "Logout")</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="FAQ">
+                <div class="Logo">
+                    <a href="FAQs.html"><img src="../img/faq.svg"></a>
+                    <br>
+                    <p1> FAQs </p1>
+                </div>
+                <div class="text">
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, est! Maiores vero optio exercitationem dolorem asperiores? Dolores, explicabo necessitatibus iste id aliquid quisquam perspiciatis ipsum accusantium, mollitia impedit, dicta doloremque.</p>
+                </div>
+                <div class="button">
+             
+                    <div class="add">
+                        <input type="button" id="button1" value="Add questions" >
+                    </div>     
+                </div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="contact-form">
+                <form action="https://prod-15.germanywestcentral.logic.azure.com:443/workflows/137bfa9c212542ffb721e181ea2bcd86/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uQ6shnrR_rSkVvhKeZOsvF3JysKGYu_xS9K1DoP7_OQ" onsubmit="javascript:callAzureLogicApp()" method="post">
+                    <img src="../img/cancel.svg" alt="close" class="close">
+                    <div class="category">
+                        <input type="text" name="category" placeholder="Category" class="form-control">
+                    </div>
+                    <div class="question">
+                        <input type="text" name="question" placeholder="Question" id="email" class="form-control">
+                    </div>
+                    <div class="solution">
+                        <input type="text" name="solution" placeholder="Solution" class="form-control">
+                    </div>
+                    <div class="keywords">
+                        <input type="text" name="keyword" placeholder="Keywords" class="form-control">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Add" onclick="showAlert();">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script>
+        document.getElementById("button1").addEventListener("click",function (){
+            document.querySelector(".popup").style.display = "flex";
+        })
+
+        document.querySelector(".close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+
+        })
+
+        function showAlert() {
+            alert("Successful")
+        }
+            </script>
+    </body>
+}

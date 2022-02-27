@@ -1,0 +1,138 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+}
+
+    .header ul {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        color: #FAF9F6;
+        background-color: #0376c3;
+    }
+
+    .header li {
+        list-style-type: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+    }
+
+    .header a {
+        text-decoration: none;
+        color: #FAF9F6;
+    }
+
+    .header .logo {
+        flex: 1;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+
+
+    .header .section:hover {
+        background-color: #63bffc;
+    }
+
+.container .profile {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.container .text {
+    margin-top: 2rem;
+}
+
+.container img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.container .profile .Logo p1 {
+    font-weight: 800;
+    font-size: 25px;
+    
+}
+.container .box {
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding-top: 5rem;
+}
+
+.box .name {
+    display: flex;
+}
+.box .name .firstname {
+    flex: 1;
+    padding-right: 2rem;
+}
+.box .name .lastname {
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.box input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 3px solid #18A0FB;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 12px 25px 12px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box ::placeholder {
+    font-style: italic;
+}
+
+.box .form {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3rem;
+}
+
+.box .email {
+    margin-top: 25px;
+}
+
+.box .address {
+    margin-top: 25px;
+}
+
+.box .mobile_numbers {
+    margin-top: 25px;
+}
+
+.container .box .button {
+    text-align: end;
+}
+
+.container .button input {
+    margin-top: 50px;
+    height: 3rem;
+    width: 25%;
+    font-size: 20px;
+    border-radius: 1.25rem;
+    border: none;
+    color: white;
+    background-color: #18A0FB;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+

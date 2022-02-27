@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Signup.cshtml";
+}
+
+<body>
+    <div id="main">
+        <div class="homepage">
+            <p> Welcome to our website </p>
+
+            <div class="box">
+                <div class="form">
+                    <form action="https://prod-21.germanywestcentral.logic.azure.com:443/workflows/f301b280e8184c65b6f642f98e0d3f7d/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=dEJlrgPKn6N9geim3Tskr8xNMBtCEjfGHlsw12ln1r0" onsubmit="javascript:callAzureLogicApp()" method="post">
+                        <div class="name">
+                            <div class="firstname">
+                                <input type="text" name="firstName" placeholder="First Name" id="first_name" class="form-control">
+                            </div>
+                            <div class="lastname">
+                                <input type="text" name="lastName" placeholder="Last Name" id="last_name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="email">
+                            <input type="email" name="email" placeholder="E-Mail" id="email" class="form-control">
+                        </div>
+                        <div class="address">
+                            <input type="text" name="address" placeholder="Address" id="address" class="form-control">
+                        </div>
+                        <div class="mobile_numbers">
+                            <input type="tel" name="mobile" placeholder="Mobile numbers" id="mobile" class="form-control">
+                        </div>
+                        <div class="username">
+                            <input type="text" name="username" placeholder="Username" id="username" class="form-control">
+                        </div>
+                        <div class="password">
+                            <input type="password" name="password" placeholder="Password" id="password" class="form-control">
+                        </div>
+                        <!--<div class="password2">
+                            <input type="text" name="" placeholder="Password again" id="" class="form-control">
+                        </div> -->
+                        <div class="signup">
+                            <input type="submit" value="Sign up">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

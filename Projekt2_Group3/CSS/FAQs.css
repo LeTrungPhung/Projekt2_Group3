@@ -1,0 +1,252 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header .Logo {
+    width: 30rem;
+    height: 12rem;
+    margin: auto;
+    margin-top: 6rem;
+    text-align: center;
+}
+.header .Logo img {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header .Logo p{
+    font-size: 2rem;
+}
+
+.header .search_bar {
+    height: auto;
+    width: 50%;
+    margin:auto;
+    margin-top: 1.5rem;
+}
+.header .search_bar input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #18A0FB;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: white;
+    background-image: url('../img/search.png');
+    background-position: 15px 11px;
+    background-repeat: no-repeat;
+    padding: 12px 25px 12px 70px;
+    font-family: 'Open Sans', sans-serif;
+}
+.body .title p{
+    margin: 5rem 0 0 10rem;
+    font-weight: bold;
+    font-size:25px;
+
+    
+}
+.body .category {
+    display: flex;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+details summary {
+    cursor:pointer;
+}
+summary::marker  {
+  
+}
+details {
+    padding: 0.5rem;
+    border-radius:10px;
+    margin-top: 2rem;
+    letter-spacing: 1px;
+}
+details summary {
+}
+details .text {
+    color: #18A0fb;
+    margin-top: 0.5rem;
+    letter-spacing:1px;
+
+}
+.body .category .category1 {
+    margin-left: 5%;
+    flex: 1;
+}
+
+span::before{
+    content: 'See all questions...';
+    color: #969696;
+    margin-top:2rem;
+}
+.category frame {
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+
+}
+.body .category .category2 {
+    margin-left: 5%;
+    flex: 1;
+}
+.body .category .category3 {
+    flex: 1;
+    margin-left: 5%;
+}
+
+.body li {
+    list-style-type: none;
+    cursor: pointer;
+    margin: 1.5rem;
+}
+.body a {
+    text-decoration: none;
+    color: black;
+}
+.body a:hover {
+    color: #18A0FB;
+}
+.body .category .title {
+    margin-top: 1rem;
+}
+.body p1 {
+    color: #18A0FB;
+    font-weight: bold;
+}
+.body .category .Qn a {
+    color: #969696;  
+}
+.body .category .Qn a:hover {
+    color: #18A0FB;
+}
+
+.contact-us {
+    margin-top: 5rem;
+    display: flex;
+    width: 30%;
+    margin-left: 60%;
+}
+.contact-us p {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+}
+.contact-us .add {
+    flex: 1;
+}
+.contact-us .add input {
+    margin-left: 10%;
+    height: 3rem;
+    width: 50%;
+    font-size: 20px;
+    border-radius: 1.25rem;
+    border: none;
+    color: white;
+    background-color: #18A0FB;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-us .clicky {
+    background-color: #18A0FB;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    border-radius: 1.25rem;
+    padding-top: 6px;
+}
+
+
+
+
+.popup {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.popup .close {
+    height: 1rem;
+    width: 1rem;
+    position: absolute;
+    top: 12rem;
+    right: 42rem;
+    cursor: pointer;
+    
+}
+
+.contact-form {
+    margin: auto;
+    width: 40%;
+    height: 48rem;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+    
+}
+
+.contact-form input {
+    margin-top: 4rem;
+    width: 90%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: white;
+    padding: 12px 25px 12px 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-form .email input {
+    margin-top: 1rem;
+}
+
+.contact-form textarea {
+    margin-top: 1rem;
+    width: 90%;
+    height: 20rem;
+    border: 1px solid rgb(0, 0, 0, 50%);
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: white;
+    padding: 12px 25px 12px 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-form .name {
+    margin-top: 1.5rem;
+}
+.contact-form .email {
+    margin-top: 1.5rem;
+}
+.contact-form .message {
+    margin-top: 1.5rem;
+}
+
+.contact-form ::placeholder {
+    font-style: italic;
+}
+.contact-form .submit {
+    margin-top: 1rem;
+    align-items: center;
+}
+.contact-form .submit input {
+    width: 15%;
+    height: 3rem;
+    padding: 9px 14px 12px 15px;
+    font-size: 20px;
+    border-radius: 1.25rem;
+    border: none;
+    color: white;
+    background-color: #18A0FB;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+    

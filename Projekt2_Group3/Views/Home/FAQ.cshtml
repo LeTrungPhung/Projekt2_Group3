@@ -1,0 +1,121 @@
+﻿@model Projekt2_Group3.Models.faq_model
+
+
+@{
+    ViewBag.Title = "FAQ";
+    Layout = "~/Views/Shared/_LayoutFAQ.cshtml";
+}
+
+@if (Session["username"] != null) 
+    {
+<body>
+
+    @using (Html.BeginForm())
+    {
+        <div class="header">
+            <div class="Logo">
+                <img src="../img/faq.svg">
+                <p> Frequently Asked Questions</p>
+            </div>
+
+            <div class="search_bar">
+                @Html.EditorFor(model => model.keyword, new
+           {
+               htmlAttributes = new
+               {
+                   @class = "form-control",
+                   @placeholder = "Type key word to find ",
+                   @type = "text",
+                   @style = "height: 40px; font - size: 13px; border - radius: 10px; border: 2px solid #18A0FB;"
+               }
+           })
+            </div>
+        </div>
+        <div class="body">
+            @*                <div class="title"><p> Frequently Asked Questions</p> </div>*@
+            <div class="category">
+                @foreach (var entry in Model.data)
+                {
+                    <div class="category1">
+                        <div class="category_name">
+                            <p1> @entry.Key </p1>
+                        </div>
+                        <div id="container">
+                            @foreach (var qt in entry.Value)
+                            {
+                                <details>
+                                    <summary> @qt.question</summary>
+                                    <p class="text">@qt.solution</p>
+                                </details>
+
+                            }
+                        </div>
+
+
+                    </div>
+                }
+
+            </div>
+        </div>
+    }
+    <div class="contact-us">
+        <p> Still can not find your answers? Please let us know</p>
+        <div class="add">
+            <input type="button" id="button1" value="Contact us">
+        </div>
+    </div>
+
+
+    <div class="popup">
+        <div class="contact-form">
+            <form id="contact_form" action="https://prod-15.germanywestcentral.logic.azure.com:443/workflows/de3d52b151964ccd867275edeb7d1d57/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=azGB1cLmRBrNbF_wMg8RxuDzO3bTpRREIWKVeYim_jg" onsubmit="javascript:callAzureLogicApp()" method="post">
+                <img src="../img/cancel.svg" alt="close" class="close">
+                <div class="name">
+                    <input type="text" name="fullname" placeholder="Name" id="name" class="form-control">
+                </div>
+                <div class="email">
+                    <input type="email" name="E-mail" placeholder="E-Mail Adress" id="email" class="form-control">
+                </div>
+                <div class="message">
+                    <textarea name="Messages" placeholder="Your questions (max. 4000 words)" id="message" class="form-control"></textarea>
+                </div>
+                <div class="submit">
+                    <button class="btn btn-primary" style="height: 40px; width: 100px; border-radius: 10px; background: #18a0fb; color: white; border: solid 1px; font-size: 20px;"
+                            onclick="submitForm();">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+@*                    document.getElementById('span').addEventListener("click", function () {
+                        document.getElementById('container').classList.toggle('active');
+                    });*@
+
+
+                    document.getElementById("button1").addEventListener("click", function () {
+                        document.querySelector(".popup").style.display = "flex";
+                    })
+
+                    document.querySelector(".close").addEventListener("click", function () {
+                        document.querySelector(".popup").style.display = "none";
+
+                    })
+
+                    function submitForm() {
+
+                        alert("Thank you for your question. We will contact you as soon as possible");
+                        document.getElementById("contact_form").submit();
+                    }
+    </script>
+    }
+</body>
+
+
+
+}
+
+

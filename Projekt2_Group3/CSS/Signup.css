@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#main {
+    width: 100%;
+}
+
+.homepage {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-image: url(../img/background.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+p {
+    padding-top: 80px;
+    font-size: 60px;
+    text-align: center;
+    color: white;
+}
+
+.homepage .box {
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    align-items: center;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 0, 0, 50%);
+}
+
+.box .name {
+    display: table;
+}
+.box .firstname {
+    display: table-cell;
+}
+.box .lastname {
+    display: table-cell;
+ 
+
+}
+.box input {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgb(0, 0, 0, 50%);
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 12px 25px 12px 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.box ::placeholder {
+    font-style: italic;
+}
+
+.box .form{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3rem;
+}
+
+.box .email {
+    margin-top: 25px;
+}
+.box .address {
+    margin-top: 25px;
+}
+.box .mobile_numbers {
+    margin-top: 25px;
+}
+.box .username {
+    margin-top: 25px;
+}
+.box .password {
+    margin-top: 25px;
+}
+.box .password2 {
+    margin-top: 25px;
+}
+.box .signup {
+    margin-top: 25px;
+}
+.box .signup input {
+    width: 100%;
+    height: 49px;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #18A0FB;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}

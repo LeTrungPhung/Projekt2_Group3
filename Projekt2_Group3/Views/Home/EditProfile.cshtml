@@ -1,0 +1,53 @@
+﻿@model Projekt2_Group3.portal_user
+
+@{
+    ViewBag.Title = "Edit Profile";
+    Layout = "~/Views/Shared/_LayoutEditProfile.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    if (Session["username"] != null)
+    {
+        <body>
+            <div class="header">
+                <ul>
+                    <li class="logo"><a a href="@Url.Action("UserHomepage", "Home")">Group3</a></li>
+                    <li class="section">@Html.ActionLink("Log out", "Logout")</li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="profile">
+                    <div class="Logo">
+                        <a href="FAQs.html"><img src="../img/profile.svg"></a>
+                        <br>
+                        <p1> Your profile </p1>
+                    </div>
+                    <div class="box">
+                        <div class="name">
+                            <div class="firstname">
+                                @Html.EditorFor(model => model.first_name, new { htmlAttributes = new { @class = "form-control", @placeholder = "First Name", @type = "text", onkeydown = "return (event.keyCode!=13);"} })
+                            </div>
+                            <div class="lastname">
+                                @Html.EditorFor(model => model.last_name, new { htmlAttributes = new { @class = "form-control", @placeholder = "Last Name", @type = "text", onkeydown = "return (event.keyCode!=13);" } })
+                            </div>
+                        </div>
+                        <div class="email">
+                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Email", @type = "email", onkeydown = "return (event.keyCode!=13);" } })
+                        </div>
+                        <div class="address">
+                            @Html.EditorFor(model => model.adress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Address", @type = "text", onkeydown = "return (event.keyCode!=13);" } })
+                        </div>
+                        <div class="mobile_numbers">
+                            @Html.EditorFor(model => model.mobile, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mobile numbers", @type = "tel", onkeydown = "return (event.keyCode!=13);" } })
+                        </div>
+                        <div class="button">
+                            <input type="submit" id="button1" value="Save changes">
+                        </div>
+
+                    </div>
+                </div>
+        </body>
+    }
+}

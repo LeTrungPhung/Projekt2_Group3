@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "User Homepage";
+    Layout = "~/Views/Shared/_LayoutUserHompage.cshtml";
+}
+
+@if (Session["username"] != null)
+{
+    <body>
+        <div class="header">
+            <ul>
+                <li class="logo"><a href="">Group3</a></li>
+                <li class="section"><a href="">Welcome @Session["username"].ToString()</a></li>
+                <li class="section">@Html.ActionLink("Log out", "Logout")</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="FAQ">
+                <div class="Logo">
+                    <a href="@Url.Action("FAQ", "Home")"><img src="../img/faq.svg"></a>
+                    <br>
+                    <p1> FAQs </p1>
+                </div>
+                <div class="text">
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, est! Maiores vero optio exercitationem dolorem asperiores? Dolores, explicabo necessitatibus iste id aliquid quisquam perspiciatis ipsum accusantium, mollitia impedit, dicta doloremque.</p>
+                </div>
+            </div>
+
+            <div class="Invoice">
+                <div class="Logo">
+                    <a href="@Url.Action("Invoice", "Home")"><img src="../img/bill.svg"></a>
+                    <br>
+                    <p1> Invoices </p1>
+                </div>
+                <div class="text">
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, est! Maiores vero optio exercitationem dolorem asperiores? Dolores, explicabo necessitatibus iste id aliquid quisquam perspiciatis ipsum accusantium, mollitia impedit, dicta doloremque.</p>
+                </div>
+            </div>
+
+            <div class="Profile">
+                <div class="Logo">
+                    <a href="@Url.Action("EditProfile", "Home")"><img src="../img/profile.svg"></a>
+                    <br>
+                    <p1> Profile</p1>
+                </div>
+                <div class="text">
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, est! Maiores vero optio exercitationem dolorem asperiores? Dolores, explicabo necessitatibus iste id aliquid quisquam perspiciatis ipsum accusantium, mollitia impedit, dicta doloremque.</p>
+                </div>
+
+            </div>
+        </div>
+    </body>
+
+}
+
+

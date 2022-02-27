@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+}
+.header ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: #FAF9F6;
+    background-color: #0376c3;
+}
+.header li {
+    list-style-type: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+.header a {
+    text-decoration: none;
+    color: #FAF9F6;
+}
+.header .logo {
+    flex: 1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.header .section:hover {
+    background-color: #63bffc;
+}
+
+.container {
+    margin-top: 10rem;
+    display: flex;
+    height: 50rem;
+
+}
+.container .FAQ {
+    flex: 1;
+    text-align: center;
+    margin: 0 5rem;
+
+}
+.container .Invoice {
+    flex: 1;
+    text-align: center;
+    margin: 0 5rem;
+}
+.container .Profile {
+    flex: 1;
+    text-align: center;
+    margin: 0 5rem;
+
+}
+.container img {
+    width: 4rem;
+    height: 4rem;
+    margin: 5rem 0 1rem 0;
+}
+
+.container p1 {
+    font-size: 1.5rem;
+    font-style: initial;
+}
+
+.container p {
+    margin: 3rem 0 0 0;
+}
+
